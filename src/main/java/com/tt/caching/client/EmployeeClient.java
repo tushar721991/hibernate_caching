@@ -19,10 +19,10 @@ public class EmployeeClient {
 		
 		Session session2 = factory.openSession();
 		Employee e3 = session2.get(Employee.class, 101);
+		System.out.println(e3.hashCode());
 		session2.close();
 		
 		
-		System.out.println(e3.hashCode());
 		factory.close();
 
 	}
